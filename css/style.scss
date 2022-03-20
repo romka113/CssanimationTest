@@ -1,0 +1,59 @@
+@import 'color','mixin','reset','keyframes';
+.container{
+  height: 100vh;
+  width: 100vw;
+  background: $bgcolor;
+  @include center();
+}
+.flower{
+  @include sizes (50%,2%);
+  background:$flowcolor;
+  position: relative;
+  animation: floweriukas linear 5s ;
+}
+
+.flower::before{
+  content: '';
+  @include sizes (100px,100px);
+  opacity: 0;
+  border-radius: 50%;
+  background-color: $capcolor;
+  position: absolute;
+  top: -15%;
+  right: -2.5em;
+  animation:bloom infinite 3s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+h1{
+  @include sizes (10%,100em);
+  position: absolute;
+  top: -3em;
+  left: -4em;
+  opacity: 0;
+  animation: textas forwards 3s;
+  animation-delay:8s;
+  z-index:1;
+}
+span{
+  top:200px;
+  position: absolute;
+  @include sizes (0px,0px);
+  border-radius:100% 0;
+  background-color: $leafcolor;
+  animation: leaf linear forwards 2s;
+  animation-delay: 5s;
+}
+
+.sun{
+  @include sizes (200px,200px);
+  background-color: $suncolor;
+  border-radius: 50%;
+  position: absolute;
+  @include position(500px,500px);
+  box-shadow: 27px 14px 32px 13px rgba(201,227,94,1);
+  animation: burning linear infinite 10s;
+  animation-direction: alternate-reverse;
+}
+
+

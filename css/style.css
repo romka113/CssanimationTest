@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes floweriukas {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50%;
+  }
+}
+@keyframes bloom {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+}
+@keyframes textas {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes leaf {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  50% {
+    height: 50px;
+    width: 50px;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+  }
+}
+@keyframes burning {
+  0% {
+    right: 50px;
+  }
+  100% {
+    box-shadow: 27px 14px 32px 200px #f8f405;
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: #ded63f;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+
+.flower {
+  height: 50%;
+  width: 2%;
+  background: #34a339;
+  position: relative;
+  animation: floweriukas linear 5s;
+}
+
+.flower::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #10e7d5;
+  position: absolute;
+  top: -15%;
+  right: -2.5em;
+  animation: bloom infinite 3s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  height: 10%;
+  width: 100em;
+  position: absolute;
+  top: -3em;
+  left: -4em;
+  opacity: 0;
+  animation: textas forwards 3s;
+  animation-delay: 8s;
+  z-index: 1;
+}
+
+span {
+  top: 200px;
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-radius: 100% 0;
+  background-color: green;
+  animation: leaf linear forwards 2s;
+  animation-delay: 5s;
+}
+
+.sun {
+  height: 200px;
+  width: 200px;
+  background-color: #f6d520;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 500px;
+  right: 500px;
+  box-shadow: 27px 14px 32px 13px #c9e35e;
+  animation: burning linear infinite 10s;
+  animation-direction: alternate-reverse;
+}
+
+/*# sourceMappingURL=style.css.map */

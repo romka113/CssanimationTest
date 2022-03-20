@@ -1,0 +1,14 @@
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+@mixin sizes($height,$width){
+  height: $height;
+  width: $width;
+}
+@mixin position($bottom,$right){
+  bottom: $bottom;
+  right:$right ;
+}
